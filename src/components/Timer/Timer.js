@@ -1,33 +1,44 @@
-import React from 'react';
-import styles from 'css';
+import React from "react";
+export default function App() {
+  const [Stimer, setSTimer] = React.useState(5);
+  const[Mtimer, setMTimer] = React.useState(0);
+  const[Htimer, setHTimer] = React.useState(0);
 
-var time="0";
-
-function startTimer(duration, display) {
-    var timing = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt (timing / 60, 10);
-        seconds = parseInt (timing % 60, 10);
-
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display = minutes + ":" + seconds;
-        //console.log(display);
-        timing--;
-    }, 1000);
+  const id =React.useRef(null);
+  const clear=()=>{
+  window.clearInterval(id.current)
 }
+  React.useEffect(()=>{
+     id.current=window.setInterval(()=>{
+      setSTimer((time)=>time-1)
+    },1000)
+    return ()=>clear();
+  },[]) //Seconds Tick Down Mechanism
 
-startTimer(180,time);
+  React.useEffect(()=>{
+    // Hours to minutes drop
+    if(Mtimer === 0 && Htimer !== 0 && Stimer === 0){ 
+      setMTimer((Ntime) => Ntime+60)
+      setHTimer((Htime) => Htime -1)
+    }
+    // Minutes to Seconds Drop
+    else if(Stimer === 0 && Mtimer !== 0){ 
+      setSTimer((time) => time+59)
+      setMTimer((Mtime) => Mtime -1)
+    }
+    //Timer Complete Event
+    else if(Stimer === 0){
+      console.log("COMPLETE")  
+      clear(); 
+    }
+  },[Stimer, Mtimer, Htimer])
 
-const Timer = () => (
-  <div className={styles.Timer}>
-    <h1>{time}</h1>
-  </div>
-);
 
-Timer.propTypes = {};
+  return (
+    <div className="App">
 
-Timer.defaultProps = {};
+     <div>{Htimer}:{Mtimer}:{Stimer} </div>
 
-export default Timer;
+    </div>
+  );
+}
