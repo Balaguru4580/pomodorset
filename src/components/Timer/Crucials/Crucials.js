@@ -1,18 +1,27 @@
 import React from "react";
-
-export default function Crucials({timerCommand}){
+import Button from "@material-ui/core/Button";
+import { TextField } from "@material-ui/core";
+export default function Crucials({ timerCommand }) {
 
     let data = []
 
-    function timerStart(){
+    function timerStart() {
         data[0] = 5;
-        data[1] = 4;
-        data[2] = 3; 
+        data[1] = 99;
+        data[2] = 3;
         timerCommand(data)
     }
-    
-    
-        return(<button onClick={timerStart}>Start Timer</button>)
-    
-    }
-    
+
+
+    return (<div>
+        <Button variant="contained" color="primary" onClick={timerStart}> Start Timer</Button>
+        <form className="HTM">
+            <TextField id="outlined-basic" label = "Hours(H)" variant="outlined"></TextField>
+            <TextField id="outlined-basic" label = "Minutes(M)" variant="outlined"></TextField>
+        </form>
+        </div>
+        
+        )
+
+}
+
