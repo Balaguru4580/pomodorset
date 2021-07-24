@@ -16,21 +16,22 @@ export default function Timer() {
   const clear = () => {
     window.clearInterval(id.current)
   }
-  /*
-  
-    React.useEffect(()=>{
-       id.current=window.setInterval(()=>{
-        setSTimer((time)=>time-1)
-      },1000)
-      //NOTNEEDED return ()=>clear();
-     
-    },[]) //Seconds Tick Down Mechanism */
+
+
+  React.useEffect(() => {
+    id.current = window.setInterval(() => {
+      setSTimer((time) => time - 1)
+    }, 1000)
+    //NOTNEEDED return ()=>clear();
+
+  }, []) //Seconds Tick Down Mechanism 
 
   React.useEffect(() => {
     //OVERFLOW prevention
-    if(Mtimer > 60 || Stimer > 60){
-      setSTimer((Stime) => Stime = 60)
-      setMTimer((Mtime) => Mtime = 60)
+    if (Htimer > 60 || Mtimer > 60 || Stimer > 60) {
+      setSTimer((Stime) => Stime = 59)
+      setMTimer((Mtime) => Mtime = 59)
+      setHTimer((Htime) => Htime = 60)
 
     }
     // Hours to minutes drop
@@ -63,11 +64,13 @@ export default function Timer() {
   };
 
   return (
-    <div className={styles.timerstyle}>
+    <div id = "Clock"  className={styles.timerstyle}>
       <h1 style={{ fontSize: 125 }}>
         {Htimer}:{Mtimer}:{Stimer}
       </h1>
-      <Crucials timerCommand={timerCommand} />
+      <div id = "Controls" className={styles.crucials}>
+        <Crucials timerCommand={timerCommand} />
+      </div>
     </div>
   );
 }
