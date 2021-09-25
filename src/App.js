@@ -1,13 +1,16 @@
-import './App.css';
-import Timer from './components/Timer/Timer';
+import "./App.css";
+import Timer from "./components/Timer/Timer";
+import DocumentTitle from "react-document-title";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Timer />
-      </header>
-    </div>
+    <DocumentTitle title="Pomodorset">
+      <div className="App">
+        <header className="App-header">
+          <Timer />
+        </header>
+      </div>
+    </DocumentTitle>
   );
 }
 
