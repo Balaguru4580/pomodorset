@@ -1,0 +1,511 @@
+body {
+    overflow-x: hidden;
+  }
+  
+  .headerMain {
+    width: 1440px;
+    height: 70px;
+    background-color: #f6feff;
+    opacity: 0.9;
+  
+    display: flex;
+    align-items: center;
+    box-shadow: 5px 4px 5px 0.1px grey;
+    position: sticky;
+    top: 0;
+  }
+  .headerMain img {
+    height: 60px;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  .logoName {
+    font-family: "Gwendolyn", cursive;
+    font-family: "Varela Round", sans-serif;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1.5em;
+    margin-block-start: 0px;
+    margin-block-end: 0em;
+    margin-inline-start: 10px;
+    margin-inline-end: 0px;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .headButtons ul {
+    display: inline;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+  }
+  .headButtons li {
+    list-style: none;
+    background: transparent;
+    display: inline;
+    padding-left: 30px;
+  }
+  .headButtons button:hover {
+    color: #f9d923;
+  }
+  .headButtons button {
+    border-style: none;
+    background-color: transparent;
+    color: black;
+    font-weight: 1000;
+    font-size: large;
+  }
+  .headButtons {
+    margin-left: 350px;
+  
+    display: inline;
+  }
+  .loginBtn {
+    border-style: none;
+    border-radius: 6px;
+    background-color: #ffd24c;
+    color: black;
+    padding: 8px 15px 8px 15px;
+    font-size: small;
+    display: inline;
+    margin-left: 100px;
+    margin-top: 0px;
+    box-shadow: 1px 1px 10px 2px gray;
+  }
+  .loginBtn:hover {
+    color: white;
+    font-weight: bolder;
+    background-color: green;
+  }
+  .loginBtn2 {
+    border-style: none;
+    border-radius: 6px;
+    background-color: transparent;
+    color: black;
+    padding: 8px 15px 8px 15px;
+    font-size: small;
+    display: inline;
+    margin-left: 10px;
+    margin-top: 0px;
+    box-shadow: 1px 1px 10px 2px gray;
+  }
+  .loginBtn2:hover {
+    color: white;
+    font-weight: bolder;
+    background-color: green;
+  }
+  
+  /* SCROLL BAR */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-corner {
+    width: 0px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #ffd24c;
+  }
+  
+  /*css for Intro Component*/
+  
+  .introMain {
+    background: url(https://i.ibb.co/NxWZFt0/Farmer-analyzing-data-on-eco-farming.jpg);
+    background-repeat: no-repeat;
+    background-position: 10px;
+    background-position-y: 20px;
+    background-size: 1000px;
+    display: flex;
+    height: 700px;
+    width: 1440px;
+    margin-top: 10px;
+  }
+  
+  .tag {
+    font-family: "Gwendolyn", cursive;
+    font-family: "Varela Round", sans-serif;
+    margin-top: 20px;
+    display: block;
+  }
+  
+  .startBtn {
+    appearance: auto;
+    writing-mode: horizontal-tb !important;
+  
+    font-weight: 900;
+  
+    font-size: 20px;
+  
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+    margin: 0em;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: none;
+    border-color: buttonborder;
+    border-image: initial;
+    height: 70px;
+    width: 250px;
+    border-radius: 8px;
+    background-color: #f9d923;
+    margin-left: 160px;
+    margin-top: 20px;
+  
+    box-shadow: 1px 1px 10px 2px gray;
+  }
+  .startBtn:hover {
+    background-color: green;
+    color: white;
+    box-shadow: 2px 2px 10px 10px;
+  }
+  
+  .intro2 {
+    display: block;
+    margin-left: 900px;
+  }
+  .intro2 img {
+    height: 350px;
+    opacity: 0.7;
+    margin-left: 40px;
+    margin-top: 40px;
+  }
+  .anime {
+    margin-top: 50px;
+    margin-left: 160px;
+    font-size: 25px;
+  }
+  .tag1 {
+    margin-top: 100px;
+    margin-left: 150px;
+    font-size: 60px;
+    color: green;
+  }
+  .tag2 {
+    margin-left: 150px;
+    color: grey;
+  }
+  .tag2 span {
+    font-size: 60px;
+    color: rgb(24, 24, 26);
+  }
+  .tag3 {
+    margin-left: 150px;
+    font-size: 60px;
+    color: rgb(122, 76, 76);
+  }
+  
+  /* CSS for About.js*/
+  .toolsMain {
+    background-color: transparent;
+    height: 450px;
+    width: 1440px;
+    margin-top: 50px;
+  }
+  
+  .toolsMain h1 {
+    display: inline-block;
+    backdrop-filter: blur(10px);
+  }
+  .toolsHeading {
+    display: block !important;
+    font-size: 30px;
+    color: rgb(48, 48, 48);
+  
+    font-weight: 200;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .line {
+    background-color: red;
+    height: 2px;
+    width: 80px;
+    margin-left: 680px;
+  }
+  .aboutText {
+    margin-left: 280px;
+    text-align: center;
+    font-size: 15px;
+    margin-right: 280px;
+    color: grey;
+  }
+  .card1 {
+    margin-left: 50px;
+    display: inline-block !important;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0.1px 0.2px 20px 0.001px rgb(199, 199, 199);
+    outline: grey;
+  }
+  .card1:hover {
+    transition: all 0.3s ease-in-out;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    background-color: rgb(200, 255, 200);
+  }
+  .card1 h1 {
+    margin-top: 0px;
+    font-size: 25px;
+    display: flex;
+    padding-left: 50px;
+    background-color: rgb(200, 255, 200);
+  }
+  
+  .card1 p {
+    width: 287px;
+  }
+  .card1 img {
+    height: 200px;
+    outline: none !important;
+  }
+  
+  /* card 2 */
+  .card2 {
+    margin-left: 50px;
+    display: inline-block !important;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0.1px 0.2px 20px 0.001px rgb(199, 199, 199);
+    outline: grey;
+  }
+  .card2:hover {
+    transition: all 0.3s ease-in-out;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    background-color: rgb(200, 255, 200);
+  }
+  .card2 h1 {
+    margin-top: 0px;
+    font-size: 25px;
+    display: flex;
+    padding-left: 50px;
+    background-color: rgb(200, 255, 200);
+  }
+  
+  .card2 p {
+    width: 287px;
+  }
+  .card2 img {
+    height: 200px;
+    outline: none !important;
+  }
+  
+  /* CARD 3 */
+  .card3 {
+    margin-left: 50px;
+    display: inline-block !important;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0.1px 0.2px 20px 0.001px rgb(199, 199, 199);
+    outline: grey;
+  }
+  .card3:hover {
+    transition: all 0.3s ease-in-out;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    background-color: rgb(200, 255, 200);
+  }
+  .card3 h1 {
+    margin-top: 0px;
+    font-size: 25px;
+    display: flex;
+    padding-left: 50px;
+    background-color: rgb(200, 255, 200);
+  }
+  
+  .card3 p {
+    width: 287px;
+  }
+  .card3 img {
+    height: 200px;
+  
+    outline: none !important;
+  }
+  
+  /*css for Schedule.js*/
+  .scMain {
+    background-color: transparent;
+    height: 450px;
+    width: 1440px;
+    margin-top: 100px;
+  }
+  .scContainer {
+    height: 310px;
+    background-color: rgb(240, 240, 240);
+    margin-top: 100px;
+    padding-bottom: 50px;
+    width: auto;
+    margin-left: 0px;
+  
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+  #root {
+    max-width: 1440px;
+  }
+  
+  /* CSS FOR SPONSOR */
+  .sponsorCards {
+    margin-top: 70px;
+    margin-left: 10px;
+    margin-bottom: 100px;
+    display: block;
+    align-items: center;
+  }
+  .sponsorCards div {
+    display: inline-flex;
+    padding-right: 30px;
+  }
+  .sponsorCards img {
+    max-height: 100px;
+    display: inline;
+  }
+  
+  /* CSS FOR CONTACT */
+  
+  .contactMain img {
+    height: 400px;
+    display: inline;
+    margin-left: 500px;
+    margin-top: 0px;
+  }
+  .cimg {
+    display: flex;
+  }
+  .contactMain button {
+    height: 50px;
+    font-weight: 400;
+    width: 200px;
+    display: inline;
+    text-align: center;
+    background-color: transparent;
+    border-color: grey;
+    border-radius: 6px;
+    border: 0.5 0.5 0.5 0.5;
+    margin-left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #btn1 {
+    margin-left: 500px;
+  }
+  .contactMain button:hover {
+    background-color: rgb(182, 88, 206);
+    color: white;
+    border-radius: 6px;
+  }
+  
+  .App {
+    min-width: 1440px !important;
+  }
+  
+  #about {
+    padding-top: 90px;
+    margin-top: 80px;
+  }
+  #home {
+    padding-top: 100px;
+    margin-top: 50px;
+  }
+  #schedule {
+    padding-top: 100px;
+    margin-top: 100px;
+    padding-bottom: 80px;
+  }
+  #sponsor {
+    margin-top: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  #contact {
+    padding-top: 120px;
+  }
+  
+  .btnD {
+    height: 40px;
+    width: 80px;
+    font-size: 15px;
+    background-color: transparent;
+    border-radius: 6px;
+  
+    margin-left: 50px !important;
+  }
+  .donateD {
+    align-items: center;
+    margin-left: 550px;
+    margin-top: 50px;
+  }
+  .donateD img {
+    height: 40px;
+    align-content: center;
+  }
+  
+  .btnD:hover {
+    background-color: rgb(182, 88, 206);
+    color: white;
+    border-radius: 6px;
+  }
+  
+  .scCard {
+    margin-left: 40px;
+    margin-top: 30px;
+    box-shadow: 0.1px 0.2px 20px 0.001px rgb(41, 41, 41);
+    display: inline-block;
+  }
+  
+  /* CSS FOR FOOTER */
+  
+  #footer {
+    height: 130px;
+    background-color: #1c1d1f;
+    border-top: 1px solid #3e4143;
+    margin-bottom: 0px;
+    width: 1440px;
+    margin-top: 100px;
+    flex-shrink: 0;
+    text-align: center;
+    color: rgb(131, 131, 131);
+  }
+  #footer p {
+    margin-bottom: 5px !important;
+    margin-top: 8px;
+  }
+  #footer img {
+    height: 30px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+  }
+  #footer img:hover {
+    height: 35px;
+  }
+  
+  #f1 {
+    display: block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  
+  .karan {
+  }

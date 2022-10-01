@@ -2,21 +2,27 @@ import React, { Fragment, useState } from "react";
 import Button from "@material-ui/core/Button";
 import { Input } from "@material-ui/core";
 import styles from "./Crucials.module.css";
+
 export default function Crucials({ timerCommand }) {
   const [Hdata, setHData] = useState("");
   const [Mdata, setMData] = useState("");
   let data = [];
-
+  const handleSubmit = e => {
+    e.preventDefault();
+    timerStart();
+    // or you can send to backend
+  };
   function timerStart() {
     //For Testing Purpose
+   
+console.log(Mdata,Hdata);
+    if (Hdata === 0 && Mdata === 0) {
+      console.log("Minimum Timer Initiated");
+      setHData((minH) => (minH = 0));
+      setMData((minM) => (minM = 15));
+    }
 
-    // if (Hdata === 0 && Mdata === 0) {
-    //   console.log("Minimum Timer Initiated");
-    //   setHData((minH) => (minH = 0));
-    //   setMData((minM) => (minM = 15));
-    // }
-
-    //Validation of Minute and Hour Data
+   //Validation of Minute and Hour Data
     if (Mdata === "" || Hdata === "" || Mdata < 0 || Hdata < 0) {
       alert("Please enter valid values into the Minutes and Hours field");
       setHData("");
@@ -29,16 +35,15 @@ export default function Crucials({ timerCommand }) {
     setHData("");
     setMData("");
     timerCommand(data);
+    //console.log(Hdata);
   }
-
+ 
+  
   return (
     <Fragment>
-      <Button variant="contained" color="primary" onClick={timerStart}>
-        {" "}
-        Start Timer
-      </Button>
-      <form className={styles.HTM} onSubmit={timerStart}>
-        <Input
+    
+      <form>
+      <Input
           type="number"
           value={Hdata}
           onChange={(e) => setHData(e.target.value)}
@@ -52,7 +57,13 @@ export default function Crucials({ timerCommand }) {
           onChange={(e) => setMData(e.target.value)}
           placeholder="Minutes(M)"
         ></Input>
+          <Button variant="contained"  type="submit" color="primary" onClick={handleSubmit} >
+        {" "}
+        Start Timer
+      </Button>
+      
       </form>
+      
     </Fragment>
   );
 }
