@@ -57,6 +57,7 @@ export default function Crucials({ timerCommand }) {
           type="number"
           id="outlined-basic"
           value={Mdata}
+          onFocus={() => setMData("")}
           onChange={(e) => setMData(e.target.value)}
           placeholder="Minutes(M)"
         ></Input>
